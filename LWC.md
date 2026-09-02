@@ -144,7 +144,11 @@ export default class AccountListImperative extends LightningElement {
 
 ---
 
-#  GET data Using @wire (Recommended for Read Operations)
+  
+  </details>
+  <details><summary><h3><mark>  GET data Using @wire (Recommended for Read Operations) </mark></h3></summary>
+
+  #  GET data Using @wire (Recommended for Read Operations)
 
 ## When to Use
 
@@ -199,6 +203,11 @@ export default class AccountListWire extends LightningElement {
 </template>
 ```
 
+  </details>
+
+  
+
+  
 ### Key Points
 
 - Automatically calls Apex.
@@ -226,7 +235,5 @@ export default class AccountListWire extends LightningElement {
 **Use Imperative Apex** when you need explicit control over execution, such as button clicks, form submissions, or DML operations.
 
 **Use @wire** for read-only operations because it automatically fetches data, supports caching, and reacts to parameter changes, resulting in better performance and simpler code.
-  
-  </details>
 
 </details>
