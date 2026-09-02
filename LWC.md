@@ -48,11 +48,11 @@ export default class HelloWorld extends LightningElement {
 
 
 
-## LWC Lifecycle Hooks ::
+### LWC Lifecycle Hooks ::
 
 Lifecycle hooks are special JavaScript methods that execute at specific stages of a Lightning Web Component's lifecycle, from creation to removal from the DOM.
 
-# LWC Lifecycle Hooks
+## LWC Lifecycle Hooks
 
 | Lifecycle Hook | When It Executes | Purpose | Runs How Many Times? |
 |----------------|------------------|----------|----------------------|
@@ -69,7 +69,7 @@ Lifecycle hooks are special JavaScript methods that execute at specific stages o
 
 <details><summary><h3><mark> GET data from Apex to LWC  </mark></h3></summary>
   
-# LWC Data Fetching from Apex
+## LWC Data Fetching from Apex
 
   <details><summary><h3><mark> GET data from Apex to LWC (Imperative Call) </mark></h3></summary>
   ### When to Use
@@ -77,7 +77,7 @@ Lifecycle hooks are special JavaScript methods that execute at specific stages o
 - When you need more control over when the Apex method is executed.
 - Supports both cacheable and non-cacheable Apex methods.
 
-### Apex Class
+#### Apex Class
 
 ```apex
 public with sharing class AccountController {
@@ -92,7 +92,7 @@ public with sharing class AccountController {
 }
 ```
 
-### LWC JavaScript
+#### LWC JavaScript
 
 ```javascript
 import { LightningElement } from 'lwc';
@@ -116,7 +116,7 @@ export default class AccountListImperative extends LightningElement {
 }
 ```
 
-### LWC HTML
+#### LWC HTML
 
 ```html
 <template>
@@ -135,7 +135,7 @@ export default class AccountListImperative extends LightningElement {
 </template>
 ```
 
-### Key Points
+#### Key Points
 
 - Apex method is called manually.
 - Returns a Promise (`then()` / `catch()`).
@@ -150,14 +150,14 @@ export default class AccountListImperative extends LightningElement {
 
   #  GET data Using @wire (Recommended for Read Operations)
 
-## When to Use
+### When to Use
 
 - For read-only operations.
 - Automatically retrieves data.
 - Supports client-side caching.
 - Reactive to parameter changes.
 
-### Apex Class
+#### Apex Class
 
 ```apex
 public with sharing class AccountController {
@@ -172,7 +172,7 @@ public with sharing class AccountController {
 }
 ```
 
-### LWC JavaScript
+#### LWC JavaScript
 
 ```javascript
 import { LightningElement, wire } from 'lwc';
@@ -185,7 +185,7 @@ export default class AccountListWire extends LightningElement {
 }
 ```
 
-### LWC HTML
+#### LWC HTML
 
 ```html
 <template>
@@ -208,7 +208,7 @@ export default class AccountListWire extends LightningElement {
   
 
   
-### Key Points
+#### Key Points
 
 - Automatically calls Apex.
 - Requires `@AuraEnabled(cacheable=true)` for read operations.
@@ -218,7 +218,7 @@ export default class AccountListWire extends LightningElement {
 
 ---
 
-# Imperative vs @wire
+## Imperative vs @wire
 
 | Feature | Imperative Call | @wire |
 |----------|----------------|--------|
@@ -230,7 +230,7 @@ export default class AccountListWire extends LightningElement {
 | Reactive Parameters | Manual Handling | Automatic |
 | Recommended For | Create, Update, Delete | Fetching Data |
 
-## Interview Answer
+### Interview Answer
 
 **Use Imperative Apex** when you need explicit control over execution, such as button clicks, form submissions, or DML operations.
 
@@ -242,10 +242,7 @@ export default class AccountListWire extends LightningElement {
 
 
 <details><summary><h3><mark> Send data from LWC to Apex </mark></h3></summary>
-  # Pass Data from LWC to Apex
-
-## Overview
-This example demonstrates how to pass data from a Lightning Web Component (LWC) to an Apex method.
+## Pass Data from LWC to Apex
 
 ### Apex Class
 
