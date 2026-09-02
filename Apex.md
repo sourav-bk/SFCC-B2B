@@ -83,7 +83,8 @@ trigger SimpleTrigger on Account(after insert) {
 
 
 
-
+<details><summary><h3><mark>   GET data from Apex to LWC  </mark></h3></summary>
+  
 # LWC Data Fetching from Apex
 
 ## GET data from Apex to LWC (Imperative Call)
@@ -242,5 +243,8 @@ export default class AccountListWire extends LightningElement {
 **Use Imperative Apex** when you need explicit control over execution, such as button clicks, form submissions, or DML operations.
 
 **Use @wire** for read-only operations because it automatically fetches data, supports caching, and reacts to parameter changes, resulting in better performance and simpler code.
+  
+</details>
+
 
 
