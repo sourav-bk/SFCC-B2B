@@ -43,3 +43,23 @@ export default class HelloWorld extends LightningElement {
 ```
 
 - Style Sheet (css): Contains custom styling.
+
+
+
+
+
+## LWC Lifecycle Hooks ::
+
+Lifecycle hooks are special JavaScript methods that execute at specific stages of a Lightning Web Component's lifecycle, from creation to removal from the DOM.
+
+# LWC Lifecycle Hooks
+
+| Lifecycle Hook | When It Executes | Purpose | Runs How Many Times? |
+|----------------|------------------|----------|----------------------|
+| **constructor()** | When the component instance is created | Initialize component state and set default values | Once |
+| **connectedCallback()** | When component is inserted into the DOM | Fetch data, subscribe to events, perform initialization | Multiple times (if reinserted) |
+| **render()** | Before every render | Conditionally select a template for rendering | Multiple times |
+| **renderedCallback()** | After component is rendered in the DOM | Access DOM elements and perform post-render operations | Multiple times |
+| **disconnectedCallback()** | When component is removed from the DOM | Cleanup tasks, unsubscribe from events, clear timers | Multiple times |
+| **errorCallback(error, stack)** | When a child component throws an error | Handle and log errors gracefully | Whenever an error occurs |
+
