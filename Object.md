@@ -8,12 +8,6 @@ Salesforce objects are digital containers or database tables that store and orga
   - Field - table column
  
 - **Main Types of Objects**
-  - Standard Objects: Pre-built tables included out-of-the-box by Salesforce.
-  - Custom Objects: Tailored tables created by your team for unique company needs.
-  - External Objects: Tables that map to data stored outside your main database.
-  - Big Objects: Specialized tables that store millions of records at a massive scale
- 
-- # Main Types of Objects in Salesforce
 
 Salesforce objects are mainly categorized into four types:
 
