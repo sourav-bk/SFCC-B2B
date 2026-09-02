@@ -63,3 +63,170 @@ Lifecycle hooks are special JavaScript methods that execute at specific stages o
 | **disconnectedCallback()** | When component is removed from the DOM | Cleanup tasks, unsubscribe from events, clear timers | Multiple times |
 | **errorCallback(error, stack)** | When a child component throws an error | Handle and log errors gracefully | Whenever an error occurs |
 
+
+
+
+
+<details><summary><h3><mark> GET data from Apex to LWC  </mark></h3></summary>
+  
+# LWC Data Fetching from Apex
+
+  <details><summary><h3><mark> GET data from Apex to LWC (Imperative Call) </mark></h3></summary>
+  ### When to Use
+- When data retrieval is triggered by a user action (button click).
+- When you need more control over when the Apex method is executed.
+- Supports both cacheable and non-cacheable Apex methods.
+
+### Apex Class
+
+```apex
+public with sharing class AccountController {
+    @AuraEnabled
+    public static List<Account> getAccounts() {
+        return [
+            SELECT Id, Name, Industry
+            FROM Account
+            LIMIT 10
+        ];
+    }
+}
+```
+
+### LWC JavaScript
+
+```javascript
+import { LightningElement } from 'lwc';
+import getAccounts from '@salesforce/apex/AccountController.getAccounts';
+
+export default class AccountListImperative extends LightningElement {
+    accounts;
+    error;
+
+    handleLoadData() {
+        getAccounts()
+            .then(result => {
+                this.accounts = result;
+                this.error = undefined;
+            })
+            .catch(error => {
+                this.error = error;
+                this.accounts = undefined;
+            });
+    }
+}
+```
+
+### LWC HTML
+
+```html
+<template>
+    <lightning-button
+        label="Load Accounts"
+        onclick={handleLoadData}>
+    </lightning-button>
+
+    <template if:true={accounts}>
+        <template for:each={accounts} for:item="account">
+            <p key={account.Id}>
+                {account.Name}
+            </p>
+        </template>
+    </template>
+</template>
+```
+
+### Key Points
+
+- Apex method is called manually.
+- Returns a Promise (`then()` / `catch()`).
+- Best for create, update, delete, and user-driven operations.
+- Provides complete control over execution timing.
+
+---
+
+#  GET data Using @wire (Recommended for Read Operations)
+
+## When to Use
+
+- For read-only operations.
+- Automatically retrieves data.
+- Supports client-side caching.
+- Reactive to parameter changes.
+
+### Apex Class
+
+```apex
+public with sharing class AccountController {
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccounts() {
+        return [
+            SELECT Id, Name, Industry
+            FROM Account
+            LIMIT 10
+        ];
+    }
+}
+```
+
+### LWC JavaScript
+
+```javascript
+import { LightningElement, wire } from 'lwc';
+import getAccounts from '@salesforce/apex/AccountController.getAccounts';
+
+export default class AccountListWire extends LightningElement {
+
+    @wire(getAccounts)
+    accounts;
+}
+```
+
+### LWC HTML
+
+```html
+<template>
+    <template if:true={accounts.data}>
+        <template for:each={accounts.data} for:item="account">
+            <p key={account.Id}>
+                {account.Name}
+            </p>
+        </template>
+    </template>
+
+    <template if:true={accounts.error}>
+        <p>Error loading accounts.</p>
+    </template>
+</template>
+```
+
+### Key Points
+
+- Automatically calls Apex.
+- Requires `@AuraEnabled(cacheable=true)` for read operations.
+- Supports reactive parameters.
+- Provides better performance through caching.
+- Recommended for displaying data on page load.
+
+---
+
+# Imperative vs @wire
+
+| Feature | Imperative Call | @wire |
+|----------|----------------|--------|
+| Execution | Manual | Automatic |
+| Use Case | User Action (Button Click) | Read-Only Data |
+| Caching | Optional | Supported |
+| Return Type | Promise | Property/Function |
+| Supports DML | ✅ Yes | ❌ No |
+| Reactive Parameters | Manual Handling | Automatic |
+| Recommended For | Create, Update, Delete | Fetching Data |
+
+## Interview Answer
+
+**Use Imperative Apex** when you need explicit control over execution, such as button clicks, form submissions, or DML operations.
+
+**Use @wire** for read-only operations because it automatically fetches data, supports caching, and reacts to parameter changes, resulting in better performance and simpler code.
+  
+  </details>
+
+</details>
