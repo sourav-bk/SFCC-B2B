@@ -8,6 +8,5 @@
 - Open the Command Palette again (`Ctrl+Shift+P` or `Cmd+Shift+P`).
 - type and select `SFDX: Authorize an Org`
 - Select your Org Type based on the environment we want to log into
-  - Production: login.
-  - salesforce.com
+  - Production: login.salesforce.com
   - Sandbox: test.salesforce.com
