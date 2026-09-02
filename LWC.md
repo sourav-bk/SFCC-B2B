@@ -237,3 +237,94 @@ export default class AccountListWire extends LightningElement {
 **Use @wire** for read-only operations because it automatically fetches data, supports caching, and reacts to parameter changes, resulting in better performance and simpler code.
 
 </details>
+
+
+
+
+<details><summary><h3><mark> Send data from LWC to Apex </mark></h3></summary>
+  # Pass Data from LWC to Apex
+
+## Overview
+This example demonstrates how to pass data from a Lightning Web Component (LWC) to an Apex method.
+
+### Apex Class
+
+```java
+public with sharing class AccountController {
+
+    @AuraEnabled
+    public static String createAccount(String accName) {
+
+        Account acc = new Account(
+            Name = accName
+        );
+
+        insert acc;
+
+        return 'Account Created Successfully';
+    }
+}
+```
+
+### LWC JavaScript
+
+```javascript
+import { LightningElement } from 'lwc';
+import createAccount from '@salesforce/apex/AccountController.createAccount';
+
+export default class AccountDemo extends LightningElement {
+
+    accountName = '';
+
+    handleChange(event) {
+        this.accountName = event.target.value;
+    }
+
+    handleSave() {
+        createAccount({ accName: this.accountName })
+            .then(result => {
+                console.log(result);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+}
+```
+
+### LWC HTML
+
+```html
+<template>
+    <lightning-input
+        label="Account Name"
+        onchange={handleChange}>
+    </lightning-input>
+
+    <lightning-button
+        label="Save"
+        onclick={handleSave}>
+    </lightning-button>
+</template>
+```
+
+## Data Flow
+
+```text
+User Input
+    ↓
+LWC JS
+    ↓
+Apex Method
+    ↓
+Database
+```
+
+## Key Points
+
+- Use `@AuraEnabled` on Apex methods.
+- Import Apex methods using `@salesforce/apex/ClassName.methodName`.
+- Pass parameters as a JavaScript object.
+- Handle responses with `.then()` and errors with `.catch()`.
+
+</details>
