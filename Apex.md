@@ -37,3 +37,44 @@ trigger SimpleTrigger on Account(after insert) {
 }
 ```
 
+# Future vs Queueable vs Batch vs Scheduled Apex
+
+| Feature | Future Method | Queueable Apex | Batch Apex | Scheduled Apex |
+|----------|-------------|---------------|------------|---------------|
+| Purpose | Simple asynchronous processing | Complex asynchronous processing | Process large volumes of records | Run jobs at a specified time |
+| Declaration | `@future` | `implements Queueable` | `implements Database.Batchable` | `implements Schedulable` |
+| Supports sObjects | ❌ No | ✅ Yes | ✅ Yes | ✅ Yes |
+| Supports Primitive Types | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| Supports Complex Types | ❌ No | ✅ Yes | ✅ Yes | ✅ Yes |
+| Callouts | ✅ Yes (`@future(callout=true)`) | ✅ Yes (`Database.AllowsCallouts`) | ✅ Yes (`Database.AllowsCallouts`) | ✅ Indirectly |
+| Job Monitoring | ❌ No | ✅ Yes | ✅ Yes | ✅ Yes |
+| Job Chaining | ❌ No | ✅ Yes | ✅ Via `finish()` | ✅ Can schedule other jobs |
+| Governor Limits | Shared Async Limits | Shared Async Limits | New Limits for Each Batch | Shared Async Limits |
+| Execution Order Guaranteed | ❌ No | ❌ No | Batch Order Managed | ✅ Scheduled Time |
+| Maximum Records | Small Volume | Small to Medium Volume | Millions of Records | Depends on Job Logic |
+| Best Use Case | Sending emails, simple updates | Integrations, complex async logic | Mass data processing | Automated recurring jobs |
+| Salesforce Recommendation | Legacy option | Preferred over Future Methods | Best for large datasets | Best for recurring executions |
+
+# Quick Decision Guide
+
+| Scenario | Recommended Apex Type |
+|-----------|----------------------|
+| Send email asynchronously | Future Apex |
+| Make external API call and track status | Queueable Apex |
+| Process 500,000 records | Batch Apex |
+| Run job every night at 1 AM | Scheduled Apex |
+| Chain multiple async jobs | Queueable Apex |
+| Data cleanup for millions of records | Batch Apex |
+| Daily product synchronization | Scheduled + Batch Apex |
+| Order processing in B2B Commerce | Queueable Apex |
+
+# Memory Trick
+
+- **Future Apex** → Do it later
+- **Queueable Apex** → Do it later with tracking and chaining
+- **Batch Apex** → Do it later for huge data volumes
+- **Scheduled Apex** → Do it later at a specific time
+``
+
+
+
