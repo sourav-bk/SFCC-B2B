@@ -1,5 +1,6 @@
 ## Step 1: Open or Create a Salesforce Project
 - Open VS Code.
+- install Salesforce CL
 - Open the Command Palette by pressing `Ctrl + Shift + P`
 - Type and select `SFDX: Create Project.` Choose the Standard template, name your project, and save it to a local folder
 
