@@ -7,6 +7,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
 
 
 Core Features and Data Types:
-**Primitives:** Integers, Doubles, Strings, Booleans, and Dates.
-**sObjects:** Special data types representing specific database records
-**Collections:** Lists, Sets, and Maps to handle multiple records efficiently.
+
+- **Primitives:** Integers, Doubles, Strings, Booleans, and Dates.
+- **sObjects:** Special data types representing specific database records
+- **Collections:** Lists, Sets, and Maps to handle multiple records efficiently.
