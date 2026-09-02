@@ -40,11 +40,11 @@ global with sharing class ProductAPI {
 
 ## Explanation::
 
-@RestResource → Exposes class as REST endpoint.
-urlMapping → API URL path.
-@HttpGet → Handles GET requests.
-@HttpPost-> Handles POST requests.
-global → Required for external access.
+- @RestResource → Exposes class as REST endpoint.
+- urlMapping → API URL path.
+- @HttpGet → Handles GET requests.
+- @HttpPost-> Handles POST requests.
+- global → Required for external access.
 
 ```
 GET /services/apexrest/products
