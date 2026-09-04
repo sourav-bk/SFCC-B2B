@@ -110,9 +110,9 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
   </details>
   
 - <details><summary><b>Contacts</b> - represent buyers</summary>
+ 
  Represents an individual buyer working for a customer account.
 
- 
   </details>
   
 - <details><summary><b>Buyer</b> - Groups control access to catalogs and pricing</summary>
