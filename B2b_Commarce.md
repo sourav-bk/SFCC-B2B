@@ -38,7 +38,7 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 
 ## Checkout Flow::
 
-## mayment Flow::
+## Payment Flow::
 
 
 
