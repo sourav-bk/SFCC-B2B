@@ -1,8 +1,8 @@
-## SF B2B Commerce ::
+## <mark>SF B2B Commerce ::</mark>
 Salesforce B2B Commerce is an eCommerce solution built on Salesforce for businesses selling products to other businesses. It supports catalogs, pricing, buyer groups, checkout, orders, and account-based purchasing.
 <img width="650" alt="image" src="https://github.com/user-attachments/assets/e95af64a-a94d-416d-8c51-2f4624d9a583" />
 
-## SF B2B Commerce Architecture ::
+## <mark>SF B2B Commerce Architecture ::</mark>
 
 Salesforce B2B Commerce Architecture as the complete journey of how a business customer logs in, sees products, gets their negotiated pricing, places an order, and how Salesforce communicates with ERP, inventory, tax, and payment systems.
 
@@ -14,7 +14,7 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 
 
 
-## Product ::
+## <mark>Product ::</mark>
 
 - ### Core Component -
   
@@ -28,10 +28,10 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 - ### Product Visibility Flow -
 
 
-## Customer Access Management ::
+## <mark>Customer Access Management ::</mark>
 
 
-## Security Layers ::
+## <mark>Security Layers ::</mark>
 
 1. Profile
 2. Permission Set
@@ -39,9 +39,9 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 4. Buyer Group
 5. Entitlement Policy
 
-## Order Flow ::
+## <mark>Order Flow ::</mark>
 
-## Checkout Flow ::
+## <mark>Checkout Flow ::</mark>
 
-## Payment Flow::
+## <mark>Payment Flow::</mark>
 
