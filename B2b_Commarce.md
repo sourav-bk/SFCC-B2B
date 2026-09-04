@@ -21,6 +21,45 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
   - The storefront allows business customers to browse products, manage carts, and place orders.
   - Product catalogs, buyer groups, entitlements, and price books control product visibility and account-specific pricing.
   - Orders are stored in Salesforce and integrated with ERP, payment, tax, and shipping systems through APIs or MuleSoft. The architecture provides a unified commerce and CRM experience on a single platform.
+
+  - **1. Storefront (Experience Cloud) :**
+    - Customer-facing website.
+    - Built using Experience Builder and Lightning Web Components (LWC).
+    - Provides product search, cart, checkout, and account management.
+      
+  - **2. Product Catalog :**
+    - Stores products using the Product2 object.
+    - Supports categories, product images, and variations.
+    - Displays products based on customer entitlements.
+      
+  - **3. Pricing & Price Books :**
+    - Uses Salesforce Price Books.
+    - Different customers can have different negotiated prices.
+    - Supports discounts and contract pricing.
+      
+  - **4. Buyer Groups & Entitlements :**
+    - Buyer Groups control which products and catalogs a customer can access.
+    - Entitlements determine product visibility and pricing.
+      
+  - **5. Cart and Checkout :**
+    - Manages shopping cart functionality.
+    - Supports bulk ordering and reordering.
+    - Integrates with payment and tax services.
+      
+  - **6. Order Management :**
+    - Creates and tracks orders.
+    - Sends order information to ERP systems.
+    - Supports order history and status visibility.
+      
+  - **7. Salesforce Core CRM :**
+    - Uses standard objects:
+      - Account
+      - Contact
+      - Product2
+      - Order
+      - Pricebook
+      - PricebookEntry
+        Provides a single source of customer data
   
 - ### Product Visibility Concepts -
   - Buyer Groups
