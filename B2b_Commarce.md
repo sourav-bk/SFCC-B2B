@@ -98,36 +98,28 @@ Account
 
 Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Products, Price Books, Entitlements, Carts, and Orders. 
 
-- Accounts represent business customers,
-  <details><summary>+</summary>
+- <details><summary><b>Accounts</b> represent business customers</summary>
   </details>
   
-- Contacts represent buyers,
-  <details><summary>+</summary>
+- <details><summary><b>Contacts</b> represent buyers</summary>
   </details>
   
-- Buyer Groups control access to catalogs and pricing,
-  <details><summary>+</summary>
+- <details><summary><b>Buyer</b> Groups control access to catalogs and pricing</summary>
   </details>
   
-- Product2 stores product data,
-  <details><summary>+</summary>
+- <details><summary><b>Product2</b> stores product data</summary>
   </details>
   
-- Price Books manage negotiated pricing,
-  <details><summary>+</summary>
+- <details><summary><b>Price</b> Books manage negotiated pricing</summary>
   </details> 
   
-- Entitlements determine product visibility,
-  <details><summary>+</summary>
+- <details><summary><b>Entitlements</b> determine product visibility</summary>
   </details>
   
-- Carts hold items before checkout,
-  <details><summary>+</summary>
+- <details><summary><b>Carts</b> hold items before checkout,</summary>
   </details>
   
-- Orders are created after successful purchase.
-  <details><summary>+</summary>
+- <details><summary><b>Orders</b> are created after successful purchase.</summary>
   </details>
 
 Together these objects provide a personalized B2B purchasing experience integrated with Salesforce CRM.
