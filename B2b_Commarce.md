@@ -28,7 +28,6 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 ## Customer Access Management ::
 
 
-
 ## Security Layers ::
 
 1. Profile
@@ -37,7 +36,11 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 4. Buyer Group
 5. Entitlement Policy
 
-## Checkout flow::
+## Checkout Flow::
+
+## mayment Flow::
+
+
 
 
 
