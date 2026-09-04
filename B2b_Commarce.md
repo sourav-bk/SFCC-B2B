@@ -57,6 +57,57 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
   
   
    ### <ins>B2B Commerce Object Model and Relationships</ins> 
+
+   ```text
+Account
+   │
+   ├── Contact
+   │      │
+   │      └── Buyer User
+   │
+   └── Buyer Group
+           │
+           ├── Entitlement Policy
+           ├── Catalog
+           └── Price Book
+                    │
+                    └── PricebookEntry
+                              │
+Product2 ─────────────────────┘
+   │
+   └── Product Category
+
+Account
+   │
+   └── Cart
+          │
+          └── Cart Item
+                   │
+                   └── Product2
+
+Account
+   │
+   └── Order
+           │
+           └── Order Item
+                    │
+                    └── Product2
+
+   ```
+
+
+Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Products, Price Books, Entitlements, Carts, and Orders. 
+
+Accounts represent business customers, 
+Contacts represent buyers, 
+Buyer Groups control access to catalogs and pricing, 
+Product2 stores product data, 
+Price Books manage negotiated pricing, 
+Entitlements determine product visibility, 
+Carts hold items before checkout, 
+Orders are created after successful purchase. 
+
+Together these objects provide a personalized B2B purchasing experience integrated with Salesforce CRM
    
 
 ## <mark>Product ::</mark>
