@@ -100,19 +100,15 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
 
 - <details><summary><b>Accounts</b> - represent business customers</summary>
  In B2B Commerce, the Account is the primary customer entity. Multiple users (Contacts) can purchase on behalf of the same Account.
- 
  **Relationships:**
    - Account → Contact (1:M)
    - Account → Buyer Group (M:M)
    - Account → Cart (1:M)
    - Account → Order (1:M)
-     
   </details>
   
 - <details><summary><b>Contacts</b> - represent buyers</summary>
- 
  Represents an individual buyer working for a customer account.
-
   </details>
   
 - <details><summary><b>Buyer</b> - Groups control access to catalogs and pricing</summary>
