@@ -37,5 +37,7 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 4. Buyer Group
 5. Entitlement Policy
 
+## Checkout flow::
+
 
 
