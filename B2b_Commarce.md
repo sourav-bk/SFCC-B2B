@@ -17,6 +17,10 @@ Salesforce B2B Commerce Architecture as the complete journey of how a business c
 ## <mark>Product ::</mark>
 
 - ### Core Component -
+  Salesforce B2B Commerce is built on Experience Cloud and the Salesforce platform.
+  - The storefront allows business customers to browse products, manage carts, and place orders.
+  - Product catalogs, buyer groups, entitlements, and price books control product visibility and account-specific pricing.
+  - Orders are stored in Salesforce and integrated with ERP, payment, tax, and shipping systems through APIs or MuleSoft. The architecture provides a unified commerce and CRM experience on a single platform.
   
 - ### Product Visibility Concepts -
   - Buyer Groups
