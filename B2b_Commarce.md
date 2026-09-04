@@ -148,29 +148,70 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
  - **Common Fields :** | Product Name |Product Code (SKU) | Description | Images | Statu
    
  - **Relationship :**
-
-### Relationship
- ```text
-  Product2
-    │
-    └── Product Category
- ```
-
+   ```text
+    Product2
+      │
+      └── Product Category
+   ```
 </details>
-  
-<details><summary><b>PriceBooks</b> - manage negotiated pricing</summary>
- Used to organize products into a catalog hierarchy.
+
+<details><summary><b>Product Category</b> - Used to organize products into a catalog hierarchy.</summary>
  
+ - **Benefits :**
+   - Easy Navigation
+   - Better Search Experience
+   - Catalog Management
+   
+ - **Relationship :**
+   ```text
+    Electronics
+        ├── Laptop
+        ├── Mobile
+        └── Tablet
+   ```
+</details>
+
+  
+<details><summary><b>Price Book and PricebookEntry</b> - manage negotiated pricing</summary>
+
+ Different customers can have different negotiated pricing through separate Price Books.
+ 
+ - **Price Book :** Stores a collection of product pricing.
+ - **PricebookEntry :** Stores price details for individual products.
  - **Benefits:**
    - Easy Navigation
    - Better Search Experience
    - Catalog Management
+ - **Relationship**
+   ```text
+       Price Book
+           │
+           ├── Product A → $100
+           ├── Product B → $200
+           └── Product C → $300
+   ```
+ 
 </details> 
   
 <details><summary><b>Entitlements policy</b> - determine product visibility</summary>
+ 
+ Controls which products a customer can view and purchase.
+ Entitlements ensure that customers only see products they are authorized to purchase.
+
+ - **Features :**
+   - Bulk Ordering
+   - Saved Cart
+   - Reordering
+ 
+ - **Relationship**
+
 </details>
   
 <details><summary><b>Carts</b> - hold items before checkout,</summary>
+
+ 
+ A temporary container used before checkout.
+ 
 </details>
   
 <details><summary><b>Orders</b> - are created after successful purchase.</summary>
