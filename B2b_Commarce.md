@@ -182,7 +182,7 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
    - Easy Navigation
    - Better Search Experience
    - Catalog Management
- - **Relationship**
+ - **Relationship :**
    ```text
        Price Book
            │
@@ -198,12 +198,19 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
  Controls which products a customer can view and purchase.
  Entitlements ensure that customers only see products they are authorized to purchase.
 
- - **Features :**
-   - Bulk Ordering
-   - Saved Cart
-   - Reordering
- 
- - **Relationship**
+ - **Controls :**
+   - Product Access
+   - Catalog Access
+   - Purchasing Rights
+  
+ - **Relationship :**
+ ```text
+     Buyer Group
+         │
+         └── Entitlement Policy
+                  │
+                  └── Product Visibility
+  ```
 
 </details>
   
