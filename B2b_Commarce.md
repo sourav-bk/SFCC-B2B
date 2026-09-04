@@ -217,6 +217,7 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
 <details><summary><b>Carts</b> - hold items before checkout,</summary>
  
  A temporary container used before checkout.
+ 
  - **Stores :**
    - Product
    - Quantity
@@ -230,15 +231,31 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
      
  - **Relationship**
    ```text
-     Cart
+     Order
       │
-      └── Cart Item
-             │
-             └── Product2
+      └── Order Item
+            │
+            └── Product2
    ```
 </details>
   
 <details><summary><b>Orders</b> - are created after successful purchase.</summary>
+ Orders are often integrated with ERP systems such as SAP and Oracle for fulfillment.
+ 
+ - **Stores**
+   - Customer Information
+   - Shipping Details
+   - Billing Details
+   - Total Amount
+   - Order Status
+ 
+ - **Stores**
+   - Customer Information
+   - Shipping Details
+   - Billing Details
+   - Total Amount
+   - Order Status
+     
 </details>
 
 Together these objects provide a personalized B2B purchasing experience integrated with Salesforce CRM.
