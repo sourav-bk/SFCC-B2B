@@ -265,7 +265,14 @@ Together these objects provide a personalized B2B purchasing experience integrat
 
 - ### Product Visibility Concepts -
   - Buyer Groups
+    <img width="336" height="291" alt="image" src="https://github.com/user-attachments/assets/d6e8e5d4-db37-4c4d-8171-1703b99adb72" />
+
+    
+
   - Entitlement Policies
+    <img width="307" height="177" alt="image" src="https://github.com/user-attachments/assets/cc435de0-66af-4361-9af1-c00361b832ab" />
+    <img width="425" height="232" alt="image" src="https://github.com/user-attachments/assets/58095e8d-c752-4dab-b023-b5c2bfea2981" />
+
   - Catalogs
   - Categories
   - Price Books
