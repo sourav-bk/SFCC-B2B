@@ -37,6 +37,18 @@ Bundles of Permission Sets managed as a single unit.
 ### LAYER 4: RECORD-LEVEL SECURITY
 <img width="446" height="347" alt="image" src="https://github.com/user-attachments/assets/6f8e5a0f-d996-412d-8ea0-4b8ca42a4af4" />
 
+- OWD :
+  
+  Security settings that set the baseline level of access for all records of a specific object across your entire organization.
+  
+- Role and Role Hierarchy :
+  
+  Role Hierarchy allows users higher in the hierarchy to see records owned by users below them.
+  <img width="387" height="462" alt="image" src="https://github.com/user-attachments/assets/621a6d70-f7f0-4710-9fa4-9e964d8954cb" />
+
+- Sharing Rules :
+  Sharing Rules extend access to records based on criteria or ownership, beyond what OWD and Role Hierarchy provide.
+
 
 
 
@@ -64,8 +76,10 @@ Licence
 
 # Record level Security ::
 
-- OWD/ Sharing settings
-- Role and Role Hierarchy
+- OWD/ Sharing settings -
+  
+- Role and Role Hierarchy -
+  
 - Sharing rules / data access | - criteria based - Owner Based sharing rules - Manual Sharing.
 
 
