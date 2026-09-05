@@ -283,8 +283,27 @@ Together these objects provide a personalized B2B purchasing experience integrat
 
 
   - **Catalogs**
+    
+    A catalog is a list of items organized in one place so people can easily find information about them.
+    <img width="372" height="478" alt="image" src="https://github.com/user-attachments/assets/9912bc98-7ff3-4748-8f43-5704efcd3587" />
+
   - **Categories**
+    
+    Category is a way to organize products within a catalog so buyers can easily browse and find products.
+
+    A Catalog contains one or more Categories.
+    
+    <img width="245" height="367" alt="image" src="https://github.com/user-attachments/assets/3453bb5a-2110-436b-90fd-a1ca8f990e42" />
+
+    
   - **Price Books**
+ 
+    A Price Book is a collection of product prices that defines how much each product costs for a specific audience, channel, or business scenario.
+
+    How much does this product cost for this buyer?
+
+    <img width="325" height="302" alt="image" src="https://github.com/user-attachments/assets/dc9e9bb9-4c61-4ac2-8166-23c30d9d8c33" />
+
     
     
 - ### Product Visibility Flow and perchase -
