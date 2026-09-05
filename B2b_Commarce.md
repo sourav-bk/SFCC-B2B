@@ -264,21 +264,28 @@ Together these objects provide a personalized B2B purchasing experience integrat
 
 
 - ### Product Visibility Concepts -
-  - Buyer Groups
-    A Buyer Group is a collection of buyers/customers that share the same product visibility, pricing, and purchasing rules in Salesforce B2B Commerce.
-    - <img width="336" height="291" alt="image" src="https://github.com/user-attachments/assets/d6e8e5d4-db37-4c4d-8171-1703b99adb72" />
+  
+  - **Buyer Groups**
     
-  - Entitlement Policies
+    A Buyer Group is a collection of buyers/customers that share the same product visibility, pricing, and purchasing rules in Salesforce B2B Commerce.
+    
+    <img width="336" height="291" alt="image" src="https://github.com/user-attachments/assets/d6e8e5d4-db37-4c4d-8171-1703b99adb72" /> <br/>
+    <img width="276" height="307" alt="image" src="https://github.com/user-attachments/assets/8113be69-e10f-47eb-8a58-ceddf1255310" />
+
+     
+  - **Entitlement Policies** 
+
     An Entitlement Policy is a rule that controls which products a Buyer Group can see and buy in a B2B store.
     Think of it as a permission list for products.
     
-    - <img width="307" height="177" alt="image" src="https://github.com/user-attachments/assets/cc435de0-66af-4361-9af1-c00361b832ab" />
-    - <img width="425" height="232" alt="image" src="https://github.com/user-attachments/assets/58095e8d-c752-4dab-b023-b5c2bfea2981" />
+    <img width="307" height="177" alt="image" src="https://github.com/user-attachments/assets/cc435de0-66af-4361-9af1-c00361b832ab" />
+    <img width="408" height="262" alt="image" src="https://github.com/user-attachments/assets/138a5758-7531-4b98-a4d6-4e74fe3aa9bf" />
 
-  - Catalogs
-  - Categories
-  - Price Books
-  - 
+
+  - **Catalogs**
+  - **Categories**
+  - **Price Books**
+    
     
 - ### Product Visibility Flow and perchase -
   <img width="287" height="667" alt="image" src="https://github.com/user-attachments/assets/7c9062b7-c856-4f13-8c56-56f2b69c458c" />
