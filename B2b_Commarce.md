@@ -269,8 +269,11 @@ Together these objects provide a personalized B2B purchasing experience integrat
   - Catalogs
   - Categories
   - Price Books
+  - 
     
-- ### Product Visibility Flow -
+- ### Product Visibility Flow and perchase -
+  <img width="287" height="667" alt="image" src="https://github.com/user-attachments/assets/7c9062b7-c856-4f13-8c56-56f2b69c458c" />
+
 
 
 ## <mark>Customer Access Management ::</mark>
