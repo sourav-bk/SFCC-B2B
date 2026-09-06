@@ -324,6 +324,12 @@ Together these objects provide a personalized B2B purchasing experience integrat
 
 ## <mark>Order Flow ::</mark>
 
+
+<img width="565" height="506" alt="image" src="https://github.com/user-attachments/assets/5a3217cb-c5b9-48a6-8bb5-0ea6228026b0" />
+
+<img width="236" height="792" alt="image" src="https://github.com/user-attachments/assets/625e29d5-ad64-4e20-a24b-8252f572825e" />
+
+
 ## <mark>Checkout Flow ::</mark>
 
 ## <mark>Payment Flow::</mark>
