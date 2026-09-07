@@ -7,7 +7,7 @@ SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Langu
   - **Key Features :**
   - **Governor Limits :**  Up to 100 synchronous queries per transaction; returns a maximum of 50,000 rows.
   - **Example :**
-    ```soql 
+    ```sql 
       SELECT Id, Name FROM Account WHERE Industry = 'Banking'
     ```
 
@@ -22,7 +22,7 @@ SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Langu
    - **Key Features :**
    - **Governor Limits :** Up to 20 queries per transaction; returns up to 2,000 records per object.
    - **Example :**
-     ```sosl 
+     ```sql 
        FIND 'Sales*' RETURNING Account(Id, Name), Contact(Id, Name)
      ```
 </details>
