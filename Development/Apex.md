@@ -15,12 +15,39 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
   - **Asynchronous ::** Runs in the background on the server when system resources are free. It handles large data volumes or long-running tasks using tools like **Future methods**, **Queueable Apex**, **Batch Apex** or **Scheduled Apex** .
 
     ### Future Methods (@future) :-
+     
+     - **Features ::**
+     - **Best Used For ::**
+     - **Benefits ::**
+     - **Governor Limits ::**
+     - **Example ::**
+    
     
     ### Queueable Apex :-
+
+     - **Features ::**
+     - **Best Used For ::**
+     - **Benefits ::**
+     - **Governor Limits ::**
+     - **Example ::**
+    
     
     ### Batch Apex :-
+
+     - **Features ::**
+     - **Best Used For ::**
+     - **Benefits ::**
+     - **Governor Limits ::**
+     - **Example ::**
+    
     
     ### Scheduled Apex :-
 
+     - **Features ::**
+     - **Best Used For ::**
+     - **Benefits ::**
+     - **Governor Limits ::**
+     - **Example ::**
+    
 
 
