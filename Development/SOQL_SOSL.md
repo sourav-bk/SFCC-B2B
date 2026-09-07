@@ -1,4 +1,6 @@
-SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Language) are the two languages used to retrieve data from the Salesforce database
+SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Language) are the two languages used to retrieve data from the Salesforce database.
+
+**The main difference is simple:** use SOQL when we know where the data is (like- specific object and fields), and use SOSL when we know.., what we are looking for (like- a text keyword) but do not know which object or field it's in.
 
 <details><summary><h3><mark> SOQL (Salesforce Object Query Language) </mark></h3></summary>
   SOQL is like a standard SQL SELECT statement. we use it to query one object or related objects at a time when we know exactly where the data lives.
