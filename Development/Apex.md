@@ -87,7 +87,37 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
        - Max future calls per 24 hours -> 2,50,000 or (number of licenses × 200) , whichever is greater.
        
      - **Example ::**
-       -
+       ```
+       public class QueueableExample implements Queueable, Database.AllowsCallouts {
+    
+              private List<Account> accounts;
+
+              public QueueableExample(List<Account> accounts) {
+                   this.accounts = accounts;
+              }
+
+              public void execute(QueueableContext context) {
+                   List<Account> toUpdate = new List<Account>();
+
+                   for (Account acc : accounts) {
+                       acc.Description = 'Processed by Queueable Job';
+                       toUpdate.add(acc);
+                   }
+
+              update toUpdate;
+
+              // Chaining: Enqueue next job
+              if (!Test.isRunningTest()) {
+                   System.enqueueJob(new AnotherQueueableJob());
+                }
+             }
+        }
+
+        // How to call:
+        // Id jobId = System.enqueueJob(new QueueableExample(accountList));
+        // System.debug('Job ID: ' + jobId);
+
+       ```
     
     </details>
     
