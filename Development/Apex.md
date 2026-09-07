@@ -5,8 +5,8 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
 ## Main Apex Components:
 
  ### 1. Apex Classes -
- ### 1. Apex Triggers -
- ### 1. Apex Interfaces -
+ ### 2. Apex Triggers -
+ ### 3. Apex Interfaces -
 
 
 ## Execution Types (Synchronous vs. Asynchronous)
