@@ -14,7 +14,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
   - **Synchronous ::** Runs immediately in real-time when triggered by a user action, UI click, or standard transaction, blocking the user until it completes.
   - **Asynchronous ::** Runs in the background on the server when system resources are free. It handles large data volumes or long-running tasks using tools like **Future methods**, **Queueable Apex**, **Batch Apex** or **Scheduled Apex** .
 
-    ### Future Methods (@future) :-
+    ### 1. Future Methods (@future) :-
 
     <details><summary>+</summary>
      
@@ -29,7 +29,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
      
     
     
-    ### Queueable Apex :-
+    ### 2. Queueable Apex :-
 
      <details><summary>+</summary>
      
@@ -42,7 +42,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
     </details>
     
     
-    ### Batch Apex :-
+    ### 3. Batch Apex :-
 
      <details><summary>+</summary>
      
@@ -55,7 +55,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
     </details>
     
     
-    ### Scheduled Apex :-
+    ### 4. Scheduled Apex :-
 
      <details><summary>+</summary>
      
