@@ -84,7 +84,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
        - Only 1 child Queueable job can be chained from a running Queueable.
        - SOQL queries limit -> 200
        - DML statements limit -> 150
-       - Max future calls per 24 hours -> 2,50,000 or (number of licenses × 200) , whichever is greater.
+       - Max queueable jobs per 24 hours -> 2,50,000 or (number of licenses × 200).
        
      - **Example ::**
        ```
@@ -123,26 +123,56 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
     
     
     ### 3. Batch Apex :-
+    Batch Apex is a Salesforce feature used to process large volumes of records asynchronously in smaller batches, helping to avoid governor limit issues
 
      <details><summary>+</summary>
      
      - **Features ::**
-     - **Best Used For ::**
-     - **Benefits ::**
+       - Implements Database.Batchable<sObject> interface.
+         - it have 3 mandatory methods:
+           - start() – collects records (returns Database.QueryLocator or Iterable<sObject>)
+           - execute() – processes each batch/chunk
+           - finish() – post-processing (send emails, chain jobs)
+       - Records are processed in chunks (batches)
+       - Returns a Job ID for monitoring.
+       - Separate governor limits for each batch execution.
+         
+     - **Benefits and Best Used For ::**
+       - Can process huge datasets up to 50 million records using Database.QueryLocator
+       - Governor limits reset per batch chunk.
+       - Ideal for scheduled data maintenance jobs.
      - **Governor Limits ::**
+       - Max records returned by Database.QueryLocator 50 million
+       - Max records returned by Iterable 50,000
+       - Max batch size 2,000
+       - SOQL queries limit -> 200
+       - Max batch executions per 24 hours -> 2,50,000 
      - **Example ::**
     
     </details>
     
     
     ### 4. Scheduled Apex :-
+    Scheduled Apex allows we to execute Apex classes automatically at a specified time or recurring interval without manual intervention. link corn job.
 
      <details><summary>+</summary>
      
      - **Features ::**
-     - **Best Used For ::**
-     - **Benefits ::**
+       - Must Implements the Schedulable interface and execute method.
+       - Uses CRON expressions to define schedule.
+       - Can be scheduled via Apex code or Salesforce UI (Setup → Apex Classes → Schedule Apex)
+       - Returns a Job ID (CronTrigger ID)
+         
+     - **Benefits and Best Used For ::**
+       - Recurring jobs that need to run at specific times (daily, weekly, monthly) to Eliminates manual intervention.
+       - Can be monitored via CronTrigger and CronJobDetail objects.
+       - Supports complex schedules via CRON expressions
+      
      - **Governor Limits ::**
+       - Maximum 100 scheduled jobs per org
+       - SOQL queries limit -> 200
+       - DML statements limit -> 150
+      
      - **Example ::**
     
     </details>
