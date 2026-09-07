@@ -7,24 +7,29 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
  ### 1. Apex Classes -
   An Apex Class is a template or blueprint that contains variables, methods, constructors, and business logic used to perform operations in Salesforce.
  ### 2. Apex Triggers -
+ 
   Apex Trigger is a piece of Apex code that executes automatically before or after events occur on Salesforce records, such as insert, update, delete, or undelete.
-  
-  **Key Points:**
-  
-  - Runs automatically when record data changes.
-  - Can execute before or after DML events.
-  - Used for validation, automation, and business logic.
-  - Supports events: before insert, before update, after insert, after update, before delete, after delete, and after undelete.
-  
-  **Types of Triggers::**
+  <details><summary>+</summary>
    
+   **Key Points:**
+   
+   - Runs automatically when record data changes.
+   - Can execute before or after DML events.
+   - Used for validation, automation, and business logic.
+   - Supports events: before insert, before update, after insert, after update, before delete, after delete, and after undelete.
+  
+   **Types of Triggers::**
+  
    - Before Triggers: Used to update or validate record values before they save to the database.
    - After Triggers: Used to access system-set field values and affect changes on related or other records.
 
-  **Governor Limits ::**
+   **Governor Limits ::**
+   
    - 100 SOQL queries per synchronous transaction.
    - 150 DML statements per transaction.
-   - 50,000 records retrieved by SOQL
+   - 50,000 records retrieved by SOQL.
+     
+  </details>
   
  ### 3. Apex Interfaces -
    An Interface in Apex is a contract that defines a set of method signatures but does not provide their implementation. Any class that implements the interface must provide the implementation for all its methods.
