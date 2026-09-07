@@ -26,16 +26,21 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
        - Defined using @future annotation
        - Using @future(callout=true) to make HTTP call
        - Cannot be called from another future or batch method.
+         
      - **Benefits and Best Used For ::**
        - Improves user experience by moving heavy processing to the background
        - Suitable for simple one-time asynchronous tasks.
        - Helps avoid mixed DML errors.
-     - **Benefits ::**
+     
      - **Governor Limits ::**
        - Maximum 50 future calls per transaction
        - Up to 250,000 future method executions per 24 hours (or licenses × 200, whichever is greater)
        - Cannot call another future method.
-       - No job chaining support
+       - No job chaining support.
+       - SOQL queries limit -> 200
+       - DML statements limit -> 150
+       - Max future calls per 24 hours -> 2,50,000 or (number of licenses × 200) , whichever is greater.
+         
      - **Example ::**
        ```apex
        public class FutureExample {
@@ -58,16 +63,31 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
     
     
     ### 2. Queueable Apex :-
+    Queueable Apex is an asynchronous Apex feature that allows we to run jobs in the background and process complex operations without affecting the user experience.
 
      <details><summary>+</summary>
      
      - **Features ::**
-       - Its Runs asynchronously in a separate thread.
-       - Must be static and return void
-     - **Best Used For ::**
-     - **Benefits ::**
+       - Implements Queueable interface and execute(QueueableContext context) method
+       - Supports complex data types (SObjects, custom objects)
+       - Returns a Job ID via System.enqueueJob() for monitoring
+       - Supports job chaining
+         
+     - **Benefits and Best Used For ::**
+       - More flexible than future methods
+       - Complex asynchronous processing
+       - Chaining multiple async jobs sequentially.
+       - Easier debugging and monitoring using Job ID.
+         
      - **Governor Limits ::**
+       - Up to 50 Queueable jobs can be added per transaction.
+       - Only 1 child Queueable job can be chained from a running Queueable.
+       - SOQL queries limit -> 200
+       - DML statements limit -> 150
+       - Max future calls per 24 hours -> 2,50,000 or (number of licenses × 200) , whichever is greater.
+       
      - **Example ::**
+       -
     
     </details>
     
