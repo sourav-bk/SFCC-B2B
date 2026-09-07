@@ -1,4 +1,4 @@
-## what is apex
+## What is apex
 Apex is Salesforce’s strongly typed, Oops language designed to add custom logic to system events like button clicks, record updates, and web service requests. It features a syntax similar to Java and acts much like database stored procedures.
 
 
