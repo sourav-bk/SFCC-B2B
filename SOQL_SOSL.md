@@ -5,6 +5,11 @@ SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Langu
   
   - **Best for :** Targeted, structured data retrieval.
   - **Key Features :**
+
+    - Uses WHERE clauses, sorting (ORDER BY), and limits (LIMIT).
+    - Supports parent-to-child and child-to-parent relationship queries.
+    - Allows aggregate functions like COUNT(), SUM(), and AVG().
+    
   - **Governor Limits :**  Up to 100 synchronous queries per transaction; returns a maximum of 50,000 rows.
   - **Example :**
     ```sql 
@@ -20,6 +25,11 @@ SOQL (Salesforce Object Query Language) and SOSL (Salesforce Object Search Langu
    - **Best for :** Quick keyword searches when we do not know which object or field contains the data.
      
    - **Key Features :**
+
+     - Searches across multiple unrelated objects in one command.
+     - Tokenizes words to find matches inside text, email, or phone fields.
+     - Returns a list of lists of sObjects
+     
    - **Governor Limits :** Up to 20 queries per transaction; returns up to 2,000 records per object.
    - **Example :**
      ```sql 
