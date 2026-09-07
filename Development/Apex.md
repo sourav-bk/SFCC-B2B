@@ -5,6 +5,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
 ## Main Apex Components:
 
  ### 1. Apex Classes -
+  An Apex Class is a template or blueprint that contains variables, methods, constructors, and business logic used to perform operations in Salesforce.
  ### 2. Apex Triggers -
   Apex Trigger is a piece of Apex code that executes automatically before or after events occur on Salesforce records, such as insert, update, delete, or undelete.
   
@@ -26,6 +27,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
    - 50,000 records retrieved by SOQL
   
  ### 3. Apex Interfaces -
+   An Interface in Apex is a contract that defines a set of method signatures but does not provide their implementation. Any class that implements the interface must provide the implementation for all its methods.
 
 
 ## Execution Types (Synchronous vs. Asynchronous)
