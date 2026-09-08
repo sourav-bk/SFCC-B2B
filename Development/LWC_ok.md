@@ -79,11 +79,32 @@ In LWC lifecycle, first constructor() is called when the component is created. T
  The 3 primary decorators have in LWC - @api, @wire, and @track.
 
  - #### @api :-
+   Used to expose a property or method as public, allowing parent components to interact with child components.
+   - **Use Cases :**
+     - Parent-to-child communication.
+     - Exposing configurable properties
+     - Exposing methods that parents can call
    
  - #### @wire :-
+   Used to connect a component to Salesforce data sources such as **1. Apex methods**, **2. Lightning Data Service adapters**, **3. UI API services**
+   - **Use Cases :**
+     - Retrieve Salesforce records
+     - Call cacheable Apex methods
+     - Automatically refresh UI when data changes
+       
+UI API services
    
  - #### @track :-
+   Historically used to make private properties re-active. Since Spring '20, most primitive fields are re-active by default, so @track is rarely required. It is mainly used when we need to observe changes within complex objects or arrays.
+   
+   - **Use Cases :**
+     - Deep tracking of object property changes.
+     - Tracking array element modifications.
+     - Legacy LWC codebases
 
+**@api →** Makes a property or method public and accessible to parent components.
+**@wire →** Retrieves Salesforce data reactively from Apex or UI APIs.
+**@track →** Used for observing changes inside complex objects and arrays; mostly un-necessary for primitive fields in modern LWC.
 
 </details>
 
