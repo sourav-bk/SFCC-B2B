@@ -110,7 +110,7 @@ UI API services
 
 
 
-<details><summary><h3><mark>Parent-to-Child and Child-to-Parent Communication</mark></h3></summary>
+<details><summary><h3><mark>Parent-to-Child and Child-to-Parent Communication on LWC </mark></h3></summary>
 
  #### 1. Parent → Child Communication :
  
