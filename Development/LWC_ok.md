@@ -72,3 +72,12 @@ In LWC lifecycle, first constructor() is called when the component is created. T
     - Logging.
         
 </details>
+
+<details><summary><h3><mark>LWC annotations/decorators- @api, @wire, @track </mark></h3></summary>
+
+</details>
+
+
+
+
+
