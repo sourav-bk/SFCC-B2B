@@ -74,6 +74,16 @@ In LWC lifecycle, first constructor() is called when the component is created. T
 </details>
 
 <details><summary><h3><mark>LWC annotations/decorators- @api, @wire, @track </mark></h3></summary>
+        
+ Decorators are SPECIAL ANNOTATIONS that modify the behavior of the property or function in a LWC.
+ The 3 primary decorators have in LWC - @api, @wire, and @track.
+
+ - #### @api :-
+   
+ - #### @wire :-
+   
+ - #### @track :-
+
 
 </details>
 
