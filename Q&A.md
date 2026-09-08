@@ -18,13 +18,13 @@
 </details>
 
 
-<details><summary><h3><mark> A user says they cannot see an Account record. How do you troubleshoot? </mark></h3></summary>
+<details><summary><h3><mark> 5. A user says they cannot see an Account record. How do you troubleshoot? </mark></h3></summary>
 </details>
 
 
-<details><summary><h3><mark> Validation Rule Not Working </mark></h3></summary>
+<details><summary><h3><mark> 6. Validation Rule Not Working </mark></h3></summary>
 </details>
 
 
-<details><summary><h3><mark> A flow is active but not working </mark></h3></summary>
+<details><summary><h3><mark> 7. A flow is active but not working </mark></h3></summary>
 </details>
