@@ -1,67 +1,161 @@
-##  LWC :
+### LWC
+LWC (Lightning Web Components) is a modern Salesforce framework used to build fast and reusable user interface components. It is based on standard web technologies like HTML, JavaScript, and CSS and follows web standards, making applications more efficient and easier to develop.
 
-Lightning Web Components (LWC) is Salesforce's modern, lightweight UI framework used to build fast, reusable, and scalable custom web components using standard HTML, modern JavaScript (ES6+), and CSS.
+**Structure**
 
-- ***Core Anatomy***
+        myComponent/
+        ├── myComponent.html      ← Template (UI markup)
+        ├── myComponent.js        ← JavaScript Controller (Logic)
+        ├── myComponent.css       ← Styles (Scoped via Shadow DOM)
+        ├── myComponent.js-meta.xml ← Metadata Configuration
+        ├── myComponent.svg       ← (Optional) Custom icon
+        ├── __tests__/            ← (Optional) Jest unit tests
+
+
+
+### Why use LWC?
+
+ - Better performance than Aura Components.
+ - Reusable components.
+ - Easy to develop and maintain.
+ - Uses standard web technologies.
+ - Supported by Salesforce Lightning Experience and Experience Cloud
+
+
+
+
+<details><summary><h3><mark>LWC Lifecycle Hooks</mark></h3></summary>
+Lightning Web Components (LWC) lifecycle hooks are special, pre-defined JavaScript methods that Salesforce calls automatically at specific stages of a component's existence — from creation to deletion.
+<hr>
+
+In LWC lifecycle, first constructor() is called when the component is created. Then connectedCallback() runs when it is inserted into the DOM. After the UI is displayed, renderedCallback() executes. Whenever data changes, renderedCallback() can run again. When the component is removed from the page, disconnectedCallback() is called. For handling errors from child components, we use errorCallback().
+
+- #### 1. constructor() ::
+  constructor() is the first lifecycle hook that runs when the component instance is created. It is mainly used for initialization.
+  - **When?** Called first when the component is created.
+  - **Use for**
+    - Initialize variables.
+    - Basic setup. 
   
-- HTML : Defines the user interface and structural template.
-```html
-<template>
-    <lightning-card title="Hello World Component">
-        <div class="slds-m-around_medium">
-            <p>Hello, {greeting}!</p>
-            <lightning-input label="Enter Name" value={greeting} onchange={handleChange}></lightning-input>
-        </div>
-    </lightning-card>
-</template>
-```
+- #### 2. connectedCallback() ::
+  connectedCallback() executes when the component is added to the page. It is commonly used to load data from Apex or perform setup operations.
+  
+  - **When?** Called when the component is inserted into the DOM (page).
+  - **Use for**
+    - Call Apex methods.
+    - Fetch data from APIs.
+    - Initialize data.
+      
+- #### 3. renderedCallback() ::
+  renderedCallback() runs after the component UI is rendered on the screen and is used when we need access to DOM elements.
+  
+  - **When?** Called after the HTML is rendered. Runs every time the component rerenders.
+  - **Use for**
+    - DOM manipulation.
+    - Third-party library initialization.
+      
+- #### 4. disconnectedCallback() ::
+  disconnectedCallback() executes when the component is removed from the DOM and is used for cleanup activities.
+  
+  - **When?** Called when the component is removed from the page.
+  - **Use for**
+    - Cleanup operations.
+    - Remove event listeners.
+    - Clear timers.
+      
+- #### 5. errorCallback() ::
+  errorCallback() catches errors from child components and helps in implementing custom error handling.
+  
+  - **When?** Called when an error occurs in a child component.
+  - **Use for**
+    - Error handling.
+    - Logging.
+        
+</details>
 
-- JavaScript : Manages business logic, user interactions, and event handling.
-```js
-  import { LightningElement, track } from 'lwc';
+<details><summary><h3><mark>LWC annotations/decorators- @api, @wire, @track </mark></h3></summary>
+        
+ Decorators are SPECIAL ANNOTATIONS that modify the behavior of the property or function in a LWC.
+ The 3 primary decorators have in LWC - @api, @wire, and @track.
 
-export default class HelloWorld extends LightningElement {
-    greeting = 'Salesforce Developer';
-    handleChange(event) {
-        this.greeting = event.target.value;
-    }
-}
-```
+ - #### @api :-
+   Used to expose a property or method as public, allowing parent components to interact with child components.
+   - **Use Cases :**
+     - Parent-to-child communication.
+     - Exposing configurable properties
+     - Exposing methods that parents can call
+   
+ - #### @wire :-
+   Used to connect a component to Salesforce data sources such as **1. Apex methods**, **2. Lightning Data Service adapters**, **3. UI API services**
+   - **Use Cases :**
+     - Retrieve Salesforce records
+     - Call cacheable Apex methods
+     - Automatically refresh UI when data changes
+       
+UI API services
+   
+ - #### @track :-
+   Historically used to make private properties re-active. Since Spring '20, most primitive fields are re-active by default, so @track is rarely required. It is mainly used when we need to observe changes within complex objects or arrays.
+   
+   - **Use Cases :**
+     - Deep tracking of object property changes.
+     - Tracking array element modifications.
+     - Legacy LWC codebases
 
-- Configuration XML : Sets metadata properties and deployment targets (like record pages or homepages).
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<LightningComponentBundle xmlns="http://sforce.com">
-    <apiVersion>60.0</apiVersion>
-    <isExposed>true</isExposed>
-    <targets>
-        <target>lightning__RecordPage</target>
-        <target>lightning__AppPage</target>
-        <target>lightning__HomePage</target>
-    </targets>
-</LightningComponentBundle>
-```
+**@api →** Makes a property or method public and accessible to parent components.
+**@wire →** Retrieves Salesforce data reactively from Apex or UI APIs.
+**@track →** Used for observing changes inside complex objects and arrays; mostly un-necessary for primitive fields in modern LWC.
 
-- Style Sheet (css): Contains custom styling.
+</details>
 
 
 
+<details><summary><h3><mark>Parent-to-Child and Child-to-Parent Communication</mark></h3></summary>
+
+ #### 1. Parent → Child Communication :
+ 
+  Parent-to-child communication in Lightning Web Components (LWC) is achieved by passing data down through public properties or invoking public methods exposed by the child.
+  
+  **Main Approaches**
+   - Public Properties (@api) -
+
+     @api decorator in the child's JavaScript file to make it public. The parent passes data by binding an attribute to the child's tag in the parent's HTML template.
+     
+   - Public Methods  (@api function) -
+
+     Define a function with the @api decorator inside the child component. The parent uses this.template.querySelector('c-child-tag').methodName(data) to call it directly.
+     
+   - Getters and Setters -
+
+     Use JavaScript getter and setter blocks on an @api property in the child component to intercept and process data whenever the parent updates it.
+ 
+ #### 2. Child → Parent Communication :
+ 
+ 
+  Child to parent communication in Lightning Web Components (LWC) is achieved using custom events. The child dispatches an event and the parent listens for it.
+  
+  **Steps for Child-to-Parent Communication**
+  
+  - Create the Event:
+
+    The child component uses the CustomEvent() constructor to build an event and optionally attach data using the detail property.
+  
+  - Dispatch the Event:
+
+    The child calls this.dispatchEvent(myEvent) to send the signal upward.
+  
+  - Listen for the Event:
+
+    The parent component listens for this custom event in its HTML template by adding an on prefix to the event name (onEventName).
+  
+  - Handle the Event:
+
+    The parent runs a handler method in its JavaScript file to process the incoming data stored in event.detail
+  
+        
+</details>
 
 
-### LWC Lifecycle Hooks ::
-
-Lifecycle hooks are special JavaScript methods that execute at specific stages of a Lightning Web Component's lifecycle, from creation to removal from the DOM.
-
-## LWC Lifecycle Hooks
-
-| Lifecycle Hook | When It Executes | Purpose | Runs How Many Times? |
-|----------------|------------------|----------|----------------------|
-| **constructor()** | When the component instance is created | Initialize component state and set default values | Once |
-| **connectedCallback()** | When component is inserted into the DOM | Fetch data, subscribe to events, perform initialization | Multiple times (if reinserted) |
-| **render()** | Before every render | Conditionally select a template for rendering | Multiple times |
-| **renderedCallback()** | After component is rendered in the DOM | Access DOM elements and perform post-render operations | Multiple times |
-| **disconnectedCallback()** | When component is removed from the DOM | Cleanup tasks, unsubscribe from events, clear timers | Multiple times |
-| **errorCallback(error, stack)** | When a child component throws an error | Handle and log errors gracefully | Whenever an error occurs |
 
 
 
