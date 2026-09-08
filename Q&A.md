@@ -12,6 +12,42 @@
 </details>
 
 <details><summary><h3><mark> 3. A customer says some products are missing from the storefront although they exist in Salesforce. </mark></h3></summary>
+  If a customer says products exist in Salesforce but are not visible in the B2B Commerce storefront.
+  
+  1. Check Product Entitlements :
+     **Verify**
+     - Buyer belongs to the correct Buyer Group
+     - Buyer Group is linked to the correct Entitlement Policy
+     - The missing product is included in the entitlement policy via CommerceEntitlementProduct records
+
+   2. Check Catalog Assignment :
+      A product can exist and be entitled but still not appear if it isn't assigned to the storefront catalog.
+      **Verify**
+      - Product is assigned to the correct Catalog.
+      - Catalog is associated with the Web Store.
+      - Product category assignment is correct
+        
+   3. Check Product Status :
+      Confirm the product is: Active or not
+      Published to the storefront.
+
+   4. Check Price Book Assignment :
+      In B2B Commerce, products generally need pricing available to the buyer.
+      **Verify**
+      - Product exists in the Store Price Book.
+      - Buyer Group has access to the correct Price Book.
+      - Active price book entries exist 
+      
+      A product without valid pricing may not appear to buyers.
+      
+   5. Check Inventory Rules :
+      If inventory-based visibility is enabled:
+      - Verify Available To Sell quantity
+      - Check inventory reservations.
+      - Review inventory visibility settings
+  
+      
+  
 </details>
 
 <details><summary><h3><mark> 4. Users can add products to cart but order placement fails during checkout. What would you do? </mark></h3></summary>
