@@ -110,5 +110,42 @@ UI API services
 
 
 
+<details><summary><h3><mark>Parent-to-Child and Child-to-Parent Communication</mark></h3></summary>
+
+ **1. Parent → Child Communication :**
+  Parent-to-child communication in Lightning Web Components (LWC) is achieved by passing data down through public properties or invoking public methods exposed by the child.
+  **Main Approaches**
+   - Public Properties (@api) - @api decorator in the child's JavaScript file to make it public. The parent passes data by binding an attribute to the child's tag in the parent's HTML template.
+   - Public Methods  (@api function) - Define a function with the @api decorator inside the child component. The parent uses this.template.querySelector('c-child-tag').methodName(data) to call it directly.
+   - Getters and Setters - Use JavaScript getter and setter blocks on an @api property in the child component to intercept and process data whenever the parent updates it.
+ 
+ **2. Child → Parent Communication :**
+ 
+  Child to parent communication in Lightning Web Components (LWC) is achieved using custom events. The child dispatches an event and the parent listens for it.
+  
+  **Steps for Child-to-Parent Communication**
+  
+  - Create the Event:
+
+    The child component uses the CustomEvent() constructor to build an event and optionally attach data using the detail property.
+  
+  - Dispatch the Event:
+
+    The child calls this.dispatchEvent(myEvent) to send the signal upward.
+  
+  - Listen for the Event:
+
+    The parent component listens for this custom event in its HTML template by adding an on prefix to the event name (onEventName).
+  
+  - Handle the Event:
+
+    The parent runs a handler method in its JavaScript file to process the incoming data stored in event.detail
+  
+        
+</details>
+
+
+
+
 
 
