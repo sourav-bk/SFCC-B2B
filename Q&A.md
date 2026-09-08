@@ -48,12 +48,13 @@
       - Verify Available To Sell quantity
       - Check inventory reservations.
       - Review inventory visibility settings
-  
-      
-  
 </details>
 
 <details><summary><h3><mark> 4. Users can add products to cart but order placement fails during checkout. What would you do? </mark></h3></summary>
+  If users can add products to the cart successfully but order placement fails during checkout, it means product visibility and cart functionality are working. The issue is usually in the checkout pipeline.
+  
+  - Reviewing checkout logs and validating the checkout flow: inventory, pricing, shipping, payment, buyer account data, permissions, and any integrations such as tax, ERP, or payment gateways.
+  
 </details>
 
 
