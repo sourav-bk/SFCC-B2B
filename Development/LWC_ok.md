@@ -115,9 +115,17 @@ UI API services
  **1. Parent → Child Communication :**
   Parent-to-child communication in Lightning Web Components (LWC) is achieved by passing data down through public properties or invoking public methods exposed by the child.
   **Main Approaches**
-   - Public Properties (@api) - @api decorator in the child's JavaScript file to make it public. The parent passes data by binding an attribute to the child's tag in the parent's HTML template.
-   - Public Methods  (@api function) - Define a function with the @api decorator inside the child component. The parent uses this.template.querySelector('c-child-tag').methodName(data) to call it directly.
-   - Getters and Setters - Use JavaScript getter and setter blocks on an @api property in the child component to intercept and process data whenever the parent updates it.
+   - Public Properties (@api) -
+
+     @api decorator in the child's JavaScript file to make it public. The parent passes data by binding an attribute to the child's tag in the parent's HTML template.
+     
+   - Public Methods  (@api function) -
+
+     Define a function with the @api decorator inside the child component. The parent uses this.template.querySelector('c-child-tag').methodName(data) to call it directly.
+     
+   - Getters and Setters -
+
+     Use JavaScript getter and setter blocks on an @api property in the child component to intercept and process data whenever the parent updates it.
  
  **2. Child → Parent Communication :**
  
