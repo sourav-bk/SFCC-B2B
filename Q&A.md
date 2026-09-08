@@ -59,12 +59,23 @@
 
 
 <details><summary><h3><mark> 5. A user says they cannot see an Account record. How do you troubleshoot? </mark></h3></summary>
+  Will check object permissions, OWD, record ownership, role hierarchy, sharing rules, manual sharing. 
 </details>
 
 
 <details><summary><h3><mark> 6. Validation Rule Not Working </mark></h3></summary>
+  1. Verify the Validation Rule is Active.
+  2. Validate the Formula Logic.
+  4. Check User Permissions.
+  5. Reproduce as the End User.
+  
 </details>
 
 
 <details><summary><h3><mark> 7. A flow is active but not working </mark></h3></summary>
+  1. Confirm the Flow is Actually Being Triggered
+  2. Check Entry Conditions.
+  3. Debug the Flow.
+  4. Review Flow Error Emails
+  5. Check User Permissions
 </details>
