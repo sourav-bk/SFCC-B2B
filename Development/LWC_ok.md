@@ -20,3 +20,17 @@ LWC (Lightning Web Components) is a modern Salesforce framework used to build fa
  - Easy to develop and maintain.
  - Uses standard web technologies.
  - Supported by Salesforce Lightning Experience and Experience Cloud
+
+
+
+
+<details><summary><h3><mark>LWC Lifecycle Hooks</mark></h3></summary>
+Lightning Web Components (LWC) lifecycle hooks are special, pre-defined JavaScript methods that Salesforce calls automatically at specific stages of a component's existence — from creation to deletion.
+
+- #### constructor() ::
+- #### connectedCallback() ::
+- #### renderedCallback() ::
+- #### disconnectedCallback() ::
+- #### errorCallback() :: 
+        
+</details>
