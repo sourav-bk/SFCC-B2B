@@ -10,3 +10,13 @@ LWC (Lightning Web Components) is a modern Salesforce framework used to build fa
         ├── myComponent.js-meta.xml ← Metadata Configuration
         ├── myComponent.svg       ← (Optional) Custom icon
         ├── __tests__/            ← (Optional) Jest unit tests
+
+
+
+### Why use LWC?
+
+ - Better performance than Aura Components.
+ - Reusable components.
+ - Easy to develop and maintain.
+ - Uses standard web technologies.
+ - Supported by Salesforce Lightning Experience and Experience Cloud
