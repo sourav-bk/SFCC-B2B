@@ -112,7 +112,7 @@ UI API services
 
 <details><summary><h3><mark>Parent-to-Child and Child-to-Parent Communication</mark></h3></summary>
 
- **1. Parent → Child Communication :**
+ #### 1. Parent → Child Communication :
  
   Parent-to-child communication in Lightning Web Components (LWC) is achieved by passing data down through public properties or invoking public methods exposed by the child.
   
@@ -129,7 +129,7 @@ UI API services
 
      Use JavaScript getter and setter blocks on an @api property in the child component to intercept and process data whenever the parent updates it.
  
- **2. Child → Parent Communication :**
+ #### 2. Child → Parent Communication :
  
  
   Child to parent communication in Lightning Web Components (LWC) is achieved using custom events. The child dispatches an event and the parent listens for it.
