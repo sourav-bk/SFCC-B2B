@@ -13,7 +13,7 @@ Salesforce Data Security is a multi-layered framework that controls, who can see
 ### LAYER 2: OBJECT-LEVEL SECURITY  |- Profiles | - Permission Sets |  Permission Set Groups
 - **Profiles::** 
 
-A Profile defines the baseline permissions and settings for a user, and every user must have exactly one profile. 
+A Profile defines the baseline permissions and settings for a user, and every user must have one profile. 
 
 - **Permission**
 
