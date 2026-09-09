@@ -47,5 +47,7 @@ Sharing Rules are record-level security settings that automatically grant additi
 
 Manual Sharing is a Salesforce feature that allows a record owner or a user with appropriate sharing permissions to grant access to a specific record to another user, role, or group.
 
-It is used when access needs to be provided on a record-by-record basis without changing OWD or creating sharing rules
+It is used when access needs to be provided on a record-by-record basis without changing OWD or creating sharing rules.
+
+ - **Ex-** Opportunity OWD is Private. A sales representative wants to share one specific opportunity with another representative.
 
