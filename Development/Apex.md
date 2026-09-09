@@ -59,8 +59,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
        - Helps avoid mixed DML errors.
      
      - **Governor Limits ::**
-       - Maximum 50 future calls per transaction
-       - Up to 250,000 future method executions per 24 hours (or licenses × 200, whichever is greater)
+       - Maximum 50 future calls per transaction.
        - Cannot call another future method.
        - No job chaining support.
        - SOQL queries limit -> 200
