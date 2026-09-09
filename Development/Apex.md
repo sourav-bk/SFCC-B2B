@@ -178,7 +178,7 @@ Apex is Salesforce’s strongly typed, Oops language designed to add custom logi
     
     
     ### 4. Scheduled Apex :-
-    Scheduled Apex allows we to execute Apex classes automatically at a specified time or recurring interval without manual intervention. link corn job.
+    Scheduled Apex allows we to execute Apex classes automatically at a specified time or recurring interval without manual intervention. like corn job.
 
      <details><summary>+</summary>
      
