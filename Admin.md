@@ -1,6 +1,6 @@
 ### Salesforce Data Security::
 
-Salesforce Data Security is a multi-layered framework that controls who can see what data and what they can do with it within a Salesforce organization.
+Salesforce Data Security is a multi-layered framework that controls, who can see, what data and what they can do with it, within a Salesforce organization.
 
 <img width="857" height="668" alt="image" src="https://github.com/user-attachments/assets/07162b86-2244-46b5-b55b-5edfdc919345" />
 
