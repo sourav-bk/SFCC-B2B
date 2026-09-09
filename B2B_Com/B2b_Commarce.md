@@ -178,10 +178,6 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
  
  - **Price Book :** Stores a collection of product pricing.
  - **PricebookEntry :** Stores price details for individual products.
- - **Benefits:**
-   - Easy Navigation
-   - Better Search Experience
-   - Catalog Management
  - **Relationship :**
    ```text
        Price Book
