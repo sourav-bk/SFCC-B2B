@@ -244,13 +244,7 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
    - Billing Details
    - Total Amount
    - Order Status
- 
- - **Stores**
-   - Customer Information
-   - Shipping Details
-   - Billing Details
-   - Total Amount
-   - Order Status
+
      
 </details>
 
