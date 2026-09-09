@@ -1,7 +1,7 @@
 ## Record Level Security in Salesforce
 
 ### 1. Organization-Wide Defaults (OWD)
-Organization-Wide Defaults (OWD) in Salesforce set the baseline, record-level default access for users who do not own a record.
+Organization-Wide Defaults (OWD) in Salesforce is the baseline security setting that defines the default level of access users have to records they do not own. It is the first step in the Salesforce record-level security model.
 
 it have 4 Core Access Levels
  
