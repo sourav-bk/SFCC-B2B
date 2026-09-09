@@ -29,10 +29,18 @@ OWD helps control whether users can view, edit, or access records owned by other
    It mirrors an organization's reporting structure. A role hierarchy automatically grants users at higher roles access to records owned by users in lower roles.
 
 ### 3. Sharing Rules  
+
+Sharing Rules are record-level security settings that automatically grant additional access to records for specific users, roles, or groups beyond the access defined by OWD.
   
   - **Owner-Based Sharing Rules**
+    Share records based on the record owner.
+
+    - **Ex-** All Accounts owned by users in the East Sales Team are shared with the Support Team as Read Only.
     
   - **Criteria-Based Sharing Rules**
+    Share records based on field values.
+    
+    - **Ex-** Share all Opportunities where Amount > $100,000 with the Sales Director role.
 
 
 ### 4. Manual Sharing
