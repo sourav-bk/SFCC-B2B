@@ -121,7 +121,7 @@ Salesforce B2B Commerce is built around Accounts, Contacts, Buyer Groups, Produc
    ```
 </details>
   
-<details><summary><b>Buyer</b> - Groups control access to catalogs and pricing</summary>
+<details><summary><b>Buyer Groups </b> -  control access to catalogs and pricing</summary>
  Buyer Groups are used to segment customers and control purchasing experiences.
  Buyer Groups allow businesses to provide different products and pricing to different customer segments.
  
