@@ -22,8 +22,6 @@ OWD helps control whether users can view, edit, or access records owned by other
 
    Roles control record visibility, while Profiles and Permission Sets control object-level and field-level permissions.
 
-   Roles control record visibility, while Profiles and Permission Sets control object-level and field-level permissions.
-
  - **Role Hierarchy :**
 
    Role Hierarchy is a mechanism that grants users higher in the hierarchy access to records owned by users below them.
