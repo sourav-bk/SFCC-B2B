@@ -6,7 +6,7 @@ Organization-Wide Defaults (OWD) in Salesforce is the baseline security setting 
 
 OWD helps control whether users can view, edit, or access records owned by other users. Based on business requirements,
 
-**OWD can be configured**
+**OWD can be configured 3 way**
  
  - **Private -** Users can access only records they own.
  - **Public Read Only -** Users can view all records but can edit only their own records.
