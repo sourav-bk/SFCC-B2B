@@ -15,7 +15,7 @@ Salesforce Data Security is a multi-layered framework that controls, who can see
 
 A Profile defines the baseline permissions and settings for a user, and every user must have one profile. 
 
-- **Permission**
+- **Permission Set**
 
 A Permission Set is used to grant additional permissions without modifying the profile, and a user can have multiple permission sets assigned. Salesforce recommends using profiles for minimum access and permission sets for extra access.
 
